@@ -104,8 +104,6 @@ nav.navbar.bootsnav.no-background{
     animation-iteration-count: infinite;
 }
 
-@animation 
-
 .education .section-heading h2{
     color: #333;
 }
@@ -452,13 +450,24 @@ background-color: orange;
     transition: background 2s;
 }
 
-.experience .timeline:hover span::before{
+.experience .single-timeline-box:hover .timeline span::before{
     position: absolute;
     background: #333;
     transform: rotate(-45deg);
     border: none;
-    top: 50px;
+    top: 70px;
     transition: transform 1s, top 1s;
+}
+
+.experience .single-timeline-box .experience-time p{
+    letter-spacing: 7px;
+    transition: letter-spacing 1s;
+}
+
+.experience .single-timeline-box:hover .experience-time p{
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: letter-spacing 1s;
 }
 
 .single-progress-txt{
@@ -518,4 +527,55 @@ background-color: orange;
 #contact .section-heading h2{
     opacity: 0.5;
     font-size: 98px;
+}
+
+#contact{
+    position: relative;
+}
+#contact::before{
+    position: absolute;
+    left: -50px;
+    bottom: -50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #fff;
+    content: "";
+}
+#contact::after{
+    position: absolute;
+    right: -50px;
+    top: -50px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: #fff;
+    content: "";
+}
+
+.single-contact-add-info p{
+    color: orange;
+    font-size: 28px;
+}
+
+#footer-copyright{
+    position: relative;
+}
+#footer-copyright::after{
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 2%;
+    height: 5px;
+    background: orange;
+}
+
+#footer-copyright:hover::after{
+    width: calc(100% - 95px);
+    transition: width 4s;
+}
+
+#footer-copyright:hover p{
+    font-weight: bold;
 }
