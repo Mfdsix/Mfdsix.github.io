@@ -432,7 +432,7 @@ background-color: orange;
     height: 60px;
     content: "";
     opacity: 0;
-    transition: opacity 1.5s, top 3s;
+    transition: opacity 1.5s, width 3s, height 3s;
 }
 
 .skills:hover::before{
@@ -482,6 +482,10 @@ background-color: orange;
 }
 .barWrapper:hover h3{
     opacity: 1;
+}
+.barWrapper:hover span.progressText{
+    color: #fff;
+    font-weight: bold;
 }
 
 .experience .timeline-content h4.title{
